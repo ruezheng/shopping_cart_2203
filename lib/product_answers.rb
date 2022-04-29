@@ -1,5 +1,6 @@
+#   FINISHED
 class Product
-  attr_reader :category, :name, :unit_price, :quantity, :hoard
+  attr_reader :category, :name, :unit_price
 
   def initialize(category, name, unit_price, quantity_string)
     @category = category
@@ -14,7 +15,7 @@ class Product
   end
 
   def total_price
-    unit_price * quantity
+      @unit_price * quantity
   end
 
   def is_hoarded?
@@ -24,4 +25,5 @@ class Product
   def hoard
     @hoarding_status = true
   end
+
 end

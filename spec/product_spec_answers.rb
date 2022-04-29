@@ -1,3 +1,4 @@
+#   FINISHED
 require 'rspec'
 require './lib/product'
 
@@ -41,14 +42,14 @@ describe Product do
       expect(product2.total_price).to eq 9.0
     end
 
-    it "Product is hoarded?" do
+    it "Product can check if it is hoarded and can also hoard" do
       product = Product.new(:paper, 'toilet paper', 3.70, '10')
 
-      expect(product.is_hoarded?).to eq(false)
+      expect(product.is_hoarded?).to eq false
 
       product.hoard
 
-      expect(product.is_hoarded?).to eq (true)
+      expect(product.is_hoarded?).to eq true
     end
   end
 end
